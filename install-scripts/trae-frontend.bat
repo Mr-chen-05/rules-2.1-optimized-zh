@@ -108,6 +108,15 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+echo. >> "%PROJECT_PATH%\.trae\rules\frontend-complete.md"
+
+REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
+type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\.trae\rules\frontend-complete.md"
+if errorlevel 1 (
+    echo ERROR: File operation failed
+    pause
+    exit /b 1
+)
 
 echo.
 echo Trae AI Frontend Rules installed successfully!

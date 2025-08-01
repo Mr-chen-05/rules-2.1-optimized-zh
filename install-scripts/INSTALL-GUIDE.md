@@ -196,6 +196,7 @@ Installation completed!
 - ✅ `create-docs.mdc` - 文档创建
 - ✅ `implement-task.mdc` - 任务实现
 - ✅ `feedback-enhanced.mdc` - 反馈增强
+- ✅ `mcp-intelligent-strategy.mdc` - 🧠 MCP智能策略（v2.2.1新增）
 
 ### 📋 后端脚本会集成哪些规则？
 
@@ -214,8 +215,9 @@ Installation completed!
 - ✅ `code-review.mdc` - 代码审查流程
 - ✅ `bug-fix.mdc` - 错误修复指南
 - ✅ `create-docs.mdc` - 文档创建
-- ✅ `implement-task.mdc` - 任务实现
+- ✅ `implement-task.mcp` - 任务实现
 - ✅ `feedback-enhanced.mdc` - 反馈增强
+- ✅ `mcp-intelligent-strategy.mdc` - 🧠 MCP智能策略（v2.2.1新增）
 
 ### 🎯 关键区别总结
 
@@ -308,7 +310,8 @@ del /q %TEMP%\*.tmp
 │   ├── code-review.mdc         # 代码审查
 │   ├── bug-fix.mdc             # 错误修复
 │   ├── mermaid.mdc             # 图表生成
-│   └── feedback-enhanced.mdc   # 智能反馈
+│   ├── feedback-enhanced.mdc   # 智能反馈
+│   └── mcp-intelligent-strategy.mdc  # 🧠 MCP智能策略（v2.2.1新增）
 ├── .trae/rules/
 │   └── frontend-complete.md    # Trae AI规则文件
 ├── CLAUDE.md                   # Claude Code规则文件 (47KB)

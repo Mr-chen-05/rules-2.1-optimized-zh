@@ -85,6 +85,14 @@ if errorlevel 1 (
     exit /b 1
 )
 
+REM Copy MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
+copy /Y "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+if errorlevel 1 (
+    echo ERROR: Operation failed
+    pause
+    exit /b 1
+)
+
 echo.
 echo Cursor Frontend Rules installed successfully!
 echo.

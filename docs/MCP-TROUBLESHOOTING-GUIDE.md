@@ -293,8 +293,8 @@ taskkill /PID 1234 /F
 - 📖 [项目README](../README.md)
 
 ### 社区支持
-- 💬 GitHub Issues: [提交问题](https://github.com/your-repo/issues)
-- 🌐 Discord社区: [加入讨论](https://discord.gg/your-server)
+- 💬 GitHub Issues: [提交问题](https://github.com/Mr-chen-05/rules-2.1-optimized/issues)
+- 📧 邮箱联系: 3553952458@qq.com
 
 ### 紧急联系
 如果遇到严重问题，请提供以下信息：

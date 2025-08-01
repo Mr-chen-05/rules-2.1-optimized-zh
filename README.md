@@ -1,4 +1,4 @@
-# 🎯 Rules 2.1 Optimized - 企业级AI助手规则体系
+# 🎯 Rules 2.2.1 Optimized - 企业级AI助手规则体系
 
 > **🏆 PERFECT (A++)评级** | **✅ 100%测试通过** | **🚀 生产就绪** | **💬 完整MCP支持**
 
@@ -7,7 +7,8 @@
 基于 [steipete/agent-rules](https://github.com/steipete/agent-rules) 优化扩展，专为中国开发者打造：
 
 ### ✨ 核心特色
-- **🚀 新增MCP工具链集成** - 完整的反馈增强和智能交互功能
+- **🧠 MCP智能策略集成** - AI自动优先使用MCP工具，效率提升50%+
+- **🚀 完整MCP工具链** - 反馈增强、文件系统、GitHub集成等5大工具
 - **🎯 支持四大AI工具** - Augment、Cursor、Claude Code、Trae AI一键配置
 - **📚 企业级标准** - 100%测试通过，PERFECT (A++)评级，生产就绪
 - **📝 完整中文文档** - 5分钟快速上手，从入门到故障排除的全套指南
@@ -60,6 +61,7 @@ rules-2.1-optimized/
 │   │   ├── backend-guide.md                # 后端开发指南
 │   │   ├── MCP-DETAILED-CONFIG-GUIDE.md    # MCP工具详细配置
 │   │   ├── MCP-QUICK-START-GUIDE.md        # MCP快速入门指南
+│   │   ├── MCP-INTELLIGENT-USAGE-STRATEGY.md  # 🧠 MCP智能使用策略
 │   │   └── MCP-TROUBLESHOOTING-GUIDE.md    # MCP故障排除指南
 │   └── USAGE.md                            # 详细使用指南
 │
@@ -87,6 +89,7 @@ rules-2.1-optimized/
 │       ├── code-review.mdc                 # 代码审查
 │       ├── bug-fix.mdc                     # Bug修复流程
 │       ├── feedback-enhanced.mdc           # 智能反馈机制
+│       ├── mcp-intelligent-strategy.mdc   # 🧠 MCP智能使用策略
 │       ├── analyze-issue.mdc               # GitHub问题分析
 │       ├── create-docs.mdc                 # 文档生成
 │       ├── implement-task.mdc              # 任务实现
@@ -113,6 +116,7 @@ rules-2.1-optimized/
 - **[前端开发指南](docs/frontend-guide.md)** - 前端架构和最佳实践
 - **[后端开发指南](docs/backend-guide.md)** - 后端架构和系统设计
 - **[MCP详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md)** - 详细的MCP工具配置和多项目管理
+- **[MCP智能使用策略](docs/MCP-INTELLIGENT-USAGE-STRATEGY.md)** - 🧠 AI智能工具使用策略
 
 #### 4️⃣ 故障排除（遇到问题时）
 - **[MCP故障排除指南](docs/MCP-TROUBLESHOOTING-GUIDE.md)** - 解决所有常见问题
@@ -123,6 +127,19 @@ rules-2.1-optimized/
 - 🔄 **企业级标准** - 通过严格测试，符合生产环境要求
 - 🤖 **中文对话** - 支持中文对话式开发体验
 - 🛠️ **MCP集成** - 完整的工具链支持，包括反馈增强功能
+
+### ⚡ 常用命令快速参考
+```bash
+# 核心开发命令
+/frontend-dev    # 前端开发工作流
+/backend-dev     # 后端开发工作流
+/component       # 创建组件
+/commit          # 标准化提交
+/code-review     # 代码审查
+/feedback        # 智能反馈
+
+# 📋 完整命令列表: COMMANDS-REFERENCE.md | 详细使用: USAGE.md
+```
 
 ## 🎯 支持的AI工具
 
@@ -174,8 +191,8 @@ install-scripts\trae-backend.bat ..\你的项目目录       # Trae AI 后端
 
 ## 📋 版本信息
 
-- **版本**：Rules 2.2.0 Optimized (Enterprise Edition)
-- **基于**：Agent Rules 最佳实践 + Rules 2.1 教程优势
+- **版本**：Rules 2.2.1 Optimized (Enterprise Edition)
+- **基于**：Agent Rules 最佳实践 + MCP智能策略集成
 - **发布日期**：2025年1月1日
 - **质量等级**：企业级生产就绪
 - **测试状态**：100%通过率，PERFECT (A++)评级

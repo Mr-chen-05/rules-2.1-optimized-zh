@@ -113,6 +113,15 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+echo. >> "%PROJECT_PATH%\CLAUDE.md"
+
+REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
+type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+if errorlevel 1 (
+    echo ERROR: Failed to append mcp-intelligent-strategy.mdc
+    pause
+    exit /b 1
+)
 
 echo.
 echo Claude Code Backend Rules installed successfully!
