@@ -42,7 +42,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
-type "%RULES_DIR%\global-rules\backend-rules-2.1.md" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\全局规则\backend-rules-2.1.md" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append backend-rules-2.1.md
     pause
@@ -51,7 +51,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
 REM Append backend rules
-type "%RULES_DIR%\project-rules\backend-dev.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\backend-dev.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append backend-dev.mdc
     pause
@@ -59,7 +59,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\commit.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\commit.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append commit.mdc
     pause
@@ -67,7 +67,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\code-review.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\code-review.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append code-review.mdc
     pause
@@ -75,7 +75,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\bug-fix.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\bug-fix.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append bug-fix.mdc
     pause
@@ -83,7 +83,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\analyze-issue.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\analyze-issue.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append analyze-issue.mdc
     pause
@@ -91,7 +91,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\create-docs.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\create-docs.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append create-docs.mdc
     pause
@@ -99,7 +99,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\implement-task.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\implement-task.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append implement-task.mdc
     pause
@@ -107,7 +107,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\feedback-enhanced.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\feedback-enhanced.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append feedback-enhanced.mdc
     pause
@@ -116,7 +116,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
 REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
-type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: Failed to append mcp-intelligent-strategy.mdc
     pause

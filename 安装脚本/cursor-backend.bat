@@ -33,56 +33,56 @@ if not exist "%PROJECT_PATH%\.cursor\rules" mkdir "%PROJECT_PATH%\.cursor\rules"
 REM Copy global and project rule files for Cursor
 echo Copying backend rule files...
 
-copy /Y "%RULES_DIR%\global-rules\backend-rules-2.1.md" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\全局规则\backend-rules-2.1.md" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
 
-copy /Y "%RULES_DIR%\project-rules\backend-dev.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\backend-dev.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\commit.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\commit.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\code-review.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\code-review.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\bug-fix.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\bug-fix.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+if errorlevel 1 ( 
+    echo ERROR: Operation failed
+    pause
+    exit /b 1
+)
+copy /Y "%RULES_DIR%\项目规则\analyze-issue.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\analyze-issue.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\create-docs.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\create-docs.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\implement-task.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
     exit /b 1
 )
-copy /Y "%RULES_DIR%\project-rules\implement-task.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
-if errorlevel 1 (
-    echo ERROR: Operation failed
-    pause
-    exit /b 1
-)
-copy /Y "%RULES_DIR%\project-rules\feedback-enhanced.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\feedback-enhanced.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
@@ -90,7 +90,7 @@ if errorlevel 1 (
 )
 
 REM Copy MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
-copy /Y "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
+copy /Y "%RULES_DIR%\项目规则\mcp-intelligent-strategy.mdc" "%PROJECT_PATH%\.cursor\rules\" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause

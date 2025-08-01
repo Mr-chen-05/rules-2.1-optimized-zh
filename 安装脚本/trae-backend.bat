@@ -34,7 +34,7 @@ REM Create combined backend rules file
 echo Creating complete backend rules file...
 
 REM Start with global backend rules
-copy /Y "%RULES_DIR%\global-rules\backend-rules-2.1.md" "%PROJECT_PATH%\.trae\rules\backend-complete.md" >nul
+copy /Y "%RULES_DIR%\全局规则\backend-rules-2.1.md" "%PROJECT_PATH%\.trae\rules\backend-complete.md" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
@@ -42,43 +42,43 @@ if errorlevel 1 (
 )
 
 REM Append commit rules
-type "%RULES_DIR%\project-rules\commit.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\commit.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\code-review.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\code-review.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\bug-fix.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\bug-fix.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\analyze-issue.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\analyze-issue.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\create-docs.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\create-docs.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\implement-task.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\implement-task.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
     exit /b 1
 )
-type "%RULES_DIR%\project-rules\feedback-enhanced.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\feedback-enhanced.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -87,7 +87,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 
 REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
-type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
+type "%RULES_DIR%\项目规则\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\.trae\rules\backend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
