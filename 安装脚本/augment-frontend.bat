@@ -34,7 +34,7 @@ REM Create combined frontend rules file
 echo Creating complete frontend rules file...
 
 REM Start with global frontend rules
-copy /Y "%RULES_DIR%\global-rules\frontend-rules-2.1.md" "%PROJECT_PATH%\.augment\rules\frontend-complete.md" >nul
+copy /Y "%RULES_DIR%\全局规则\frontend-rules-2.1.md" "%PROJECT_PATH%\.augment\rules\frontend-complete.md" >nul
 if errorlevel 1 (
     echo ERROR: Operation failed
     pause
@@ -47,7 +47,7 @@ echo ## Additional Commands for Augment >> "%PROJECT_PATH%\.augment\rules\fronte
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append commit rules
-type "%RULES_DIR%\project-rules\commit.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\commit.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -56,7 +56,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append code review rules
-type "%RULES_DIR%\project-rules\code-review.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\code-review.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -65,7 +65,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append bug fix rules
-type "%RULES_DIR%\project-rules\bug-fix.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\bug-fix.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -74,7 +74,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append mermaid rules
-type "%RULES_DIR%\project-rules\mermaid.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\mermaid.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -83,7 +83,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append create docs rules
-type "%RULES_DIR%\project-rules\create-docs.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\create-docs.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -92,7 +92,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append implement task rules
-type "%RULES_DIR%\project-rules\implement-task.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\implement-task.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -101,7 +101,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append feedback enhanced rules
-type "%RULES_DIR%\project-rules\feedback-enhanced.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\feedback-enhanced.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -110,7 +110,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 
 REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
-type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
+type "%RULES_DIR%\项目规则\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\.augment\rules\frontend-complete.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause

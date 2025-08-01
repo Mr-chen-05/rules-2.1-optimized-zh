@@ -32,7 +32,7 @@ echo Creating CLAUDE.md file...
 echo # Claude Code Frontend Rules > "%PROJECT_PATH%\CLAUDE.md"
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\global-rules\frontend-rules-2.1.md" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\全局规则\frontend-rules-2.1.md" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -41,7 +41,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
 REM Append frontend rules
-type "%RULES_DIR%\project-rules\frontend-dev.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\frontend-dev.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -49,7 +49,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\commit.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\commit.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -57,7 +57,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\code-review.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\code-review.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -65,7 +65,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\bug-fix.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\bug-fix.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -73,7 +73,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\mermaid.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\mermaid.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -81,7 +81,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\create-docs.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\create-docs.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -89,7 +89,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\implement-task.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\implement-task.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -97,7 +97,7 @@ if errorlevel 1 (
 )
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
-type "%RULES_DIR%\project-rules\feedback-enhanced.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\feedback-enhanced.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause
@@ -106,7 +106,7 @@ if errorlevel 1 (
 echo. >> "%PROJECT_PATH%\CLAUDE.md"
 
 REM Append MCP intelligent strategy rules (CRITICAL FOR AI EFFICIENCY)
-type "%RULES_DIR%\project-rules\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
+type "%RULES_DIR%\项目规则\mcp-intelligent-strategy.mdc" >> "%PROJECT_PATH%\CLAUDE.md"
 if errorlevel 1 (
     echo ERROR: File operation failed
     pause

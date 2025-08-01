@@ -38,7 +38,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
     
     echo [1/4] Installing Augment Frontend Rules...
-    call install-scripts\augment-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\augment-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -47,7 +47,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [2/4] Installing Cursor Frontend Rules...
-    call install-scripts\cursor-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\cursor-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -56,7 +56,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [3/4] Installing Claude Code Frontend Rules...
-    call install-scripts\claude-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\claude-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -65,20 +65,20 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [4/4] Installing Trae AI Frontend Rules...
-    call install-scripts\trae-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\trae-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
         exit /b 1
     )
     echo.
-    
+
 ) else if /i "%INSTALL_TYPE%"=="backend" (
     echo Installing Backend Rules for all tools...
     echo.
-    
+
     echo [1/4] Installing Augment Backend Rules...
-    call install-scripts\augment-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\augment-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -87,7 +87,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [2/4] Installing Cursor Backend Rules...
-    call install-scripts\cursor-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\cursor-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -96,7 +96,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [3/4] Installing Claude Code Backend Rules...
-    call install-scripts\claude-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\claude-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -105,7 +105,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [4/4] Installing Trae AI Backend Rules...
-    call install-scripts\trae-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\trae-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -118,7 +118,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
     
     echo [1/8] Installing Augment Frontend Rules...
-    call install-scripts\augment-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\augment-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -127,7 +127,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [2/8] Installing Augment Backend Rules...
-    call install-scripts\augment-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\augment-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -136,7 +136,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [3/8] Installing Cursor Frontend Rules...
-    call install-scripts\cursor-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\cursor-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -145,7 +145,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [4/8] Installing Cursor Backend Rules...
-    call install-scripts\cursor-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\cursor-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -154,7 +154,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [5/8] Installing Claude Code Frontend Rules...
-    call install-scripts\claude-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\claude-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -163,7 +163,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [6/8] Installing Claude Code Backend Rules...
-    call install-scripts\claude-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\claude-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -172,7 +172,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [7/8] Installing Trae AI Frontend Rules...
-    call install-scripts\trae-frontend.bat "%PROJECT_PATH%"
+    call 安装脚本\trae-frontend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
@@ -181,7 +181,7 @@ if /i "%INSTALL_TYPE%"=="frontend" (
     echo.
 
     echo [8/8] Installing Trae AI Backend Rules...
-    call install-scripts\trae-backend.bat "%PROJECT_PATH%"
+    call 安装脚本\trae-backend.bat "%PROJECT_PATH%"
     if errorlevel 1 (
         echo ERROR: Installation script failed
         pause
