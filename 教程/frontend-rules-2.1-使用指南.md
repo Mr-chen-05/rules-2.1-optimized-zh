@@ -390,14 +390,14 @@ AI响应：[模式：优化] [角色：前端性能工程师]
 
 ## 📚 更多资源
 
-- **详细文档**：查看 `docs/frontend-guide.md`
-- **项目规则**：浏览 `project-rules/` 目录
-- **全局规则**：参考 `global-rules/` 目录
+- **详细文档**：查看 `文档/frontend-guide.md`
+- **项目规则**：浏览 `项目规则/` 目录（重点查看 `frontend-dev.mdc`）
+- **全局规则**：参考 `全局规则/` 目录
 - **问题反馈**：遇到问题请及时反馈
 
 ## 📋 版本信息
 
-- **版本**：Frontend Rules v2.2.1 Optimized (Enterprise Edition)
+- **版本**：Frontend Rules v2.1 Optimized (Enterprise Edition)
 - **发布日期**：2025年1月1日
 - **质量等级**：企业级生产就绪，PERFECT (A++)评级
 - **测试状态**：100%通过率，所有MCP工具验证可用

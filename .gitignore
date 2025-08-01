@@ -80,3 +80,5 @@ test-project/
 demo-project/
 temp-install/
 .test-*
+# 工具脚本
+工具脚本/*

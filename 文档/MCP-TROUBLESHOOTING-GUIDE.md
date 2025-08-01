@@ -290,7 +290,7 @@ taskkill /PID 1234 /F
 ### 自助资源
 - 📚 [MCP快速入门指南](MCP-QUICK-START-GUIDE.md)
 - 🔧 [MCP详细配置指南](MCP-DETAILED-CONFIG-GUIDE.md)
-- 📖 [项目README](../README.md)
+- 📖 [项目说明](../项目说明.md)
 
 ### 社区支持
 - 💬 GitHub Issues: [提交问题](https://github.com/Mr-chen-05/rules-2.1-optimized/issues)

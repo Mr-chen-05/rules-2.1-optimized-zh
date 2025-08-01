@@ -18,9 +18,9 @@
 
 **⏱️ 预计时间：** 45-90 分钟（取决于需要安装的环境数量）
 
-## 🎯 什么是后端规则 v2.2.1？
+## 🎯 什么是后端规则 v2.1？
 
-后端规则 v2.2.1 是专门为 API/数据库/微服务开发优化的 AI 助手规则，包含：
+后端规则 v2.1 是专门为 API/数据库/微服务开发优化的 AI 助手规则，包含：
 
 - 🏗️ **架构设计模式** - 系统设计和技术选型
 - ⚡ **API 开发模式** - RESTful API 和 GraphQL 实现
@@ -411,18 +411,18 @@ AI响应：[模式：数据建模] [角色：数据库工程师]
 
 ## 🎉 完成！
 
-恭喜！你已经成功配置了后端开发 AI 助手规则 v2.2.1。现在可以享受高效的后端开发体验了！
+恭喜！你已经成功配置了后端开发 AI 助手规则 v2.1。现在可以享受高效的后端开发体验了！
 
 ## 📚 更多资源
 
-- **详细文档**：查看 `docs/backend-guide.md`
-- **项目规则**：浏览 `project-rules/` 目录
-- **全局规则**：参考 `global-rules/` 目录
-- **MCP配置**：详见 `docs/MCP-DETAILED-CONFIG-GUIDE.md`
+- **详细文档**：查看 `文档/backend-guide.md`
+- **项目规则**：浏览 `项目规则/` 目录（重点查看 `backend-dev.mdc`）
+- **全局规则**：参考 `全局规则/` 目录
+- **MCP配置**：详见 `文档/MCP-DETAILED-CONFIG-GUIDE.md`
 
 ## 📋 版本信息
 
-- **版本**：Backend Rules v2.2.1 Optimized (Enterprise Edition)
+- **版本**：Backend Rules v2.1 Optimized (Enterprise Edition)
 - **发布日期**：2025年1月1日
 - **质量等级**：企业级生产就绪，PERFECT (A++)评级
 - **测试状态**：100%通过率，所有MCP工具验证可用
