@@ -68,22 +68,27 @@ where node 2>nul
 where npm 2>nul
 echo.
 
-echo [5/6] Checking other package managers...
+echo [5/6] Checking Python packages...
 echo ----------------------------------------
-echo Checking yarn global packages...
-yarn global list 2>nul | findstr "modelcontextprotocol"
-if errorlevel 1 (
-    echo [INFO] MCP tools not found in yarn
-)
-
-echo.
-echo Checking Python packages...
+echo Checking Python MCP packages...
 pip list 2>nul | findstr "mcp"
 if errorlevel 1 (
     echo [INFO] MCP tools not found in Python packages
 ) else (
     echo [OK] Found MCP-related Python packages above
 )
+
+echo.
+echo [6/6] Checking Python package locations...
+echo ----------------------------------------
+echo Checking mcp-feedback-enhanced location...
+pip show mcp-feedback-enhanced 2>nul | findstr "Location:"
+echo.
+echo Checking fastmcp location...
+pip show fastmcp 2>nul | findstr "Location:"
+echo.
+echo Checking core mcp location...
+pip show mcp 2>nul | findstr "Location:"
 echo.
 
 echo ========================================
