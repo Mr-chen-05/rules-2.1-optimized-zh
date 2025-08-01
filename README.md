@@ -4,13 +4,13 @@
 
 ## 📖 项目简介
 
-企业级AI助手规则体系，支持主流AI开发工具的一键安装和配置：
+基于 [steipete/agent-rules](https://github.com/steipete/agent-rules) 优化扩展，专为中国开发者打造：
 
-### 🎯 核心优势
-- **🚀 一键安装** - 支持 Augment、Cursor、Claude Code、Trae AI
-- **📚 企业级标准** - 100%测试通过，符合生产环境要求
-- **💬 MCP工具链** - 完整的反馈增强和工具集成支持
-- **📝 完整文档** - 从5分钟入门到故障排除的全套指南
+### ✨ 核心特色
+- **🚀 新增MCP工具链集成** - 完整的反馈增强和智能交互功能
+- **🎯 支持四大AI工具** - Augment、Cursor、Claude Code、Trae AI一键配置
+- **📚 企业级标准** - 100%测试通过，PERFECT (A++)评级，生产就绪
+- **📝 完整中文文档** - 5分钟快速上手，从入门到故障排除的全套指南
 
 ## 🚀 快速开始（3分钟上手）
 
@@ -183,6 +183,9 @@ install-scripts\trae-backend.bat ..\你的项目目录       # Trae AI 后端
 ### 👨‍💻 作者信息
 - **博客ID**：m0_73635308
 - **联系邮箱**：3553952458@qq.com
+
+### 🙏 致谢
+本项目基于 [steipete/agent-rules](https://github.com/steipete/agent-rules) 进行优化和扩展，感谢原作者 Peter Steinberger 的优秀工作。
 
 ---
 

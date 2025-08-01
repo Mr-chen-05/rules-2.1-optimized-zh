@@ -145,6 +145,9 @@ install-scripts\install-all.bat ..\你的项目目录 fullstack
 - **博客ID**：m0_73635308
 - **联系邮箱**：3553952458@qq.com
 
+### 🙏 致谢
+本项目基于 [steipete/agent-rules](https://github.com/steipete/agent-rules) 进行优化和扩展，感谢原作者 Peter Steinberger 的优秀工作。
+
 ---
 
 🎉 **开始使用 Rules 2.1 Optimized，享受企业级AI辅助开发体验！**
