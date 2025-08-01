@@ -15,7 +15,9 @@
 
 ## 🎯 一键配置（推荐方式）
 
-### 步骤1：检查环境
+### 步骤1：检查和配置环境
+
+#### 🔍 环境检查
 ```powershell
 # 检查Node.js（必需）
 node --version
@@ -26,9 +28,114 @@ python --version
 # 应该显示 Python 3.8 或更高版本
 ```
 
-**如果没有安装**：
-- Node.js: 访问 https://nodejs.org 下载LTS版本
-- Python: 访问 https://python.org 下载最新版本
+#### 📦 Node.js 安装选项
+
+**方式1：直接安装（推荐新手）**
+- 🔗 **下载地址**：https://nodejs.org
+- 📝 **选择版本**：点击左侧绿色按钮下载 LTS 版本
+
+**方式2：使用 NVM 管理（推荐开发者）**
+- ✅ **优点**：可以安装和切换多个 Node.js 版本
+- 🎯 **适合人群**：需要在不同项目间切换 Node.js 版本的开发者
+
+<details>
+<summary>🚀 <strong>NVM 详细安装教程</strong>（点击展开）</summary>
+
+**⚠️ 重要：安装 NVM 前必须先卸载已有 Node.js！**
+
+**🗑️ 卸载已有 Node.js：**
+1. **检查是否已安装**：
+   ```bash
+   node --version
+   ```
+   - ✅ 显示"不是内部或外部命令" = 没安装，可直接安装 NVM
+   - ❌ 显示版本号 = 已安装，需要先卸载
+
+2. **卸载步骤**：
+   - 按`Win + R`，输入`appwiz.cpl`，按回车
+   - 找到"Node.js" → 右键 → 卸载
+   - 清理残留：删除 `C:\Users\%USERNAME%\AppData\Roaming\npm` 目录
+
+**🔽 NVM 安装步骤：**
+1. **下载**：访问 https://github.com/coreybutler/nvm-windows/releases
+2. **安装**：右键以管理员身份运行 `nvm-setup.exe`
+3. **验证**：打开新的命令提示符，输入 `nvm version`
+4. **安装Node.js**：
+   ```bash
+   # 安装最新LTS版本
+   nvm install 18.19.0
+   nvm use 18.19.0
+
+   # 验证安装
+   node --version
+   npm --version
+   ```
+
+**🎯 NVM 常用命令：**
+```bash
+nvm list              # 查看已安装版本
+nvm list available    # 查看可安装版本
+nvm install 18.19.0   # 安装指定版本
+nvm use 18.19.0       # 切换到指定版本
+```
+
+</details>
+
+#### 🚀 npm 镜像源配置（解决安装慢问题）
+
+如果你在中国大陆，强烈建议配置npm镜像源以提高安装速度：
+
+<details>
+<summary>📦 <strong>npm镜像源配置教程</strong>（点击展开）</summary>
+
+**方式1：使用淘宝镜像（推荐）**
+```bash
+# 设置淘宝镜像
+npm config set registry https://registry.npmmirror.com
+
+# 验证配置
+npm config get registry
+# 应该显示：https://registry.npmmirror.com
+```
+
+**方式2：使用cnpm（备选）**
+```bash
+# 安装cnpm
+npm install -g cnpm --registry=https://registry.npmmirror.com
+
+# 使用cnpm代替npm
+cnpm install package-name
+```
+
+**方式3：临时使用镜像**
+```bash
+# 单次安装使用镜像
+npm install package-name --registry=https://registry.npmmirror.com
+```
+
+**🔄 恢复官方源：**
+```bash
+npm config set registry https://registry.npmjs.org
+```
+
+**📊 镜像源速度测试：**
+```bash
+# 安装测试工具
+npm install -g nrm
+
+# 测试各镜像源速度
+nrm test
+
+# 切换到最快的源
+nrm use taobao
+```
+
+</details>
+
+#### 🐍 Python 环境配置
+**如果没有安装Python**：
+- 访问 https://python.org 下载最新版本
+- 安装时勾选"Add Python to PATH"
 
 ### 步骤2：安装uv工具
 ```powershell
@@ -427,20 +534,62 @@ pip install uv
 
 ## 🐛 常见问题解决
 
-### Q: 反馈界面打不开？
+### 🔧 Node.js 和 npm 相关问题
+
+#### Q: npm 安装速度很慢？
+**A**: 切换到国内镜像源（推荐）
+```bash
+# 设置淘宝镜像
+npm config set registry https://registry.npmmirror.com
+
+# 验证配置
+npm config get registry
+```
+
+#### Q: 提示"nvm 不是内部或外部命令"？
+**A**: 环境变量配置问题
+```bash
+解决方案：
+1. 重新打开命令提示符（关闭后重新打开）
+2. 检查环境变量：
+   - 按Win + R，输入sysdm.cpl
+   - 点击"环境变量"
+   - 在"系统变量"中找到Path
+   - 确认包含：C:\nvm
+```
+
+#### Q: NVM 安装 Node.js 时提示权限错误？
+**A**: 权限不足
+```bash
+解决方案：
+1. 以管理员身份运行命令提示符
+2. 或者重新以管理员身份安装NVM
+```
+
+#### Q: 切换 Node.js 版本后 npm 命令失效？
+**A**: npm 需要重新安装
+```bash
+解决方案：
+1. 重新安装npm：npm install -g npm
+2. 或者重新安装Node.js：nvm install 18.19.0
+```
+
+### 🔌 MCP 工具相关问题
+
+#### Q: 反馈界面打不开？
 **A**: 检查端口是否被占用
 ```powershell
 netstat -an | findstr :8765
 ```
 如果被占用，修改配置中的端口号。
 
-### Q: SSH环境下无法访问？
+#### Q: SSH环境下无法访问？
 **A**: 设置 `MCP_WEB_HOST` 为 `0.0.0.0`，并确保防火墙允许端口访问。
 
-### Q: GitHub功能不工作？
+#### Q: GitHub功能不工作？
 **A**: 检查Token权限，确保包含 `repo` 权限。
 
-### Q: 中文显示乱码？
+#### Q: 中文显示乱码？
 **A**: 添加语言配置：
 ```json
 {
