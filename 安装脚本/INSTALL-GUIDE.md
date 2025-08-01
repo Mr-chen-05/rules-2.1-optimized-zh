@@ -66,9 +66,9 @@ cd c:\Users\luo20\Desktop\rules-2.1-optimized
 dir
 ```
 你应该看到这些文件夹：
-- `install-scripts` ✅
-- `project-rules` ✅  
-- `global-rules` ✅
+- `安装脚本` ✅
+- `项目规则` ✅
+- `全局规则` ✅
 
 ### 🥉 第3步：选择你的AI工具和项目类型
 
@@ -88,59 +88,59 @@ dir
 
 **前端开发**：
 ```cmd
-install-scripts\augment-frontend.bat ..\demo-project
+安装脚本\augment-frontend.bat ..\demo-project
 ```
 
 **后端开发**：
 ```cmd
-install-scripts\augment-backend.bat ..\demo-project
+安装脚本\augment-backend.bat ..\demo-project
 ```
 
 ### 🎯 Cursor 用户（直接复制粘贴）
 
 **前端开发**：
 ```cmd
-install-scripts\cursor-frontend.bat ..\demo-project
+安装脚本\cursor-frontend.bat ..\demo-project
 ```
 
 **后端开发**：
 ```cmd
-install-scripts\cursor-backend.bat ..\demo-project
+安装脚本\cursor-backend.bat ..\demo-project
 ```
 
 ### 🎯 Claude Code 用户（直接复制粘贴）
 
 **前端开发**：
 ```cmd
-install-scripts\claude-frontend.bat ..\demo-project
+安装脚本\claude-frontend.bat ..\demo-project
 ```
 
 **后端开发**：
 ```cmd
-install-scripts\claude-backend.bat ..\demo-project
+安装脚本\claude-backend.bat ..\demo-project
 ```
 
 ### 🎯 Trae AI 用户（直接复制粘贴）
 
 **前端开发**：
 ```cmd
-install-scripts\trae-frontend.bat ..\demo-project
+安装脚本\trae-frontend.bat ..\demo-project
 ```
 
 **后端开发**：
 ```cmd
-install-scripts\trae-backend.bat ..\demo-project
+安装脚本\trae-backend.bat ..\demo-project
 ```
 
 ### 🚀 懒人专用：一键安装所有工具
 
 **如果你想支持所有AI工具**（推荐）：
 ```cmd
-install-scripts\install-all.bat ..\demo-project frontend
+安装脚本\install-all.bat ..\demo-project frontend
 ```
 
 **🤔 这个命令是什么意思？**
-- `install-scripts\install-all.bat` = 运行一键安装脚本
+- `安装脚本\install-all.bat` = 运行一键安装脚本
 - `..\demo-project` = 你的项目文件夹位置（把这个改成你的项目路径）
 - `frontend` = 安装前端规则（如果你做后端开发，改成 `backend`）
 
@@ -183,9 +183,9 @@ Installation completed!
 当您执行前端脚本时（如 `augment-frontend.bat`），脚本会自动集成：
 
 **🎯 基础规则**：
-- `global-rules\frontend-rules-2.1.md` （全局前端开发规则）
+- `全局规则\frontend-rules-2.1.md` （全局前端开发规则）
 
-**🔧 项目规则**（从 `project-rules\` 目录自动选择）：
+**🔧 项目规则**（从 `项目规则\` 目录自动选择）：
 - ✅ `frontend-dev.mdc` - 前端开发工作流
 - ✅ `component.mdc` - 组件创建和管理
 - ✅ `ui-design.mdc` - UI设计和样式开发
@@ -203,9 +203,9 @@ Installation completed!
 当您执行后端脚本时（如 `augment-backend.bat`），脚本会自动集成：
 
 **🎯 基础规则**：
-- `global-rules\backend-rules-2.1.md` （全局后端开发规则）
+- `全局规则\backend-rules-2.1.md` （全局后端开发规则）
 
-**🔧 项目规则**（从 `project-rules\` 目录自动选择）：
+**🔧 项目规则**（从 `项目规则\` 目录自动选择）：
 - ✅ `backend-dev.mdc` - 后端开发工作流
 - ✅ `api-design.mdc` - API接口设计
 - ✅ `database-design.mdc` - 数据库设计
@@ -350,7 +350,7 @@ dir .trae\rules\
 mkdir ..\你的项目目录
 
 # 或使用绝对路径
-install-scripts\install-all.bat C:\完整\项目\路径 frontend
+安装脚本\install-all.bat C:\完整\项目\路径 frontend
 ```
 
 #### 问题2：某些文件没有创建
@@ -402,7 +402,7 @@ dir C:\
 
 **❌ 问题1：脚本无法运行**
 ```
-错误：无法将".\install-scripts\augment-frontend.bat"项识别为 cmdlet
+错误：无法将".\安装脚本\augment-frontend.bat"项识别为 cmdlet
 ```
 **✅ 解决**：确保在正确的目录下
 ```cmd
@@ -429,18 +429,18 @@ mkdir ..\demo-project
 ### 自定义项目路径
 ```cmd
 # 使用绝对路径
-install-scripts\augment-frontend.bat C:\projects\my-vue-app
+安装脚本\augment-frontend.bat C:\projects\my-vue-app
 
 # 使用相对路径
-install-scripts\cursor-backend.bat ..\..\other-projects\api-server
+安装脚本\cursor-backend.bat ..\..\other-projects\api-server
 ```
 
 ### 同时支持多个AI工具
 ```cmd
 # 同一个项目可以支持多个AI工具
-install-scripts\augment-frontend.bat ..\demo-project
-install-scripts\cursor-frontend.bat ..\demo-project
-install-scripts\claude-frontend.bat ..\demo-project
+安装脚本\augment-frontend.bat ..\demo-project
+安装脚本\cursor-frontend.bat ..\demo-project
+安装脚本\claude-frontend.bat ..\demo-project
 ```
 
 ---
