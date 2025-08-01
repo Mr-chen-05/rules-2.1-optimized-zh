@@ -44,7 +44,7 @@ dir ..\你的项目目录\.trae\rules\        # Trae AI规则
 
 **📚 详细教程**：
 - [傻瓜式安装指南](install-scripts/INSTALL-GUIDE.md) - 100%成功率
-- [MCP工具配置指南](docs/mcp-setup-guide.md) - 包含自动配置脚本
+- [MCP详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md) - 包含完整配置教程
 - [故障排除指南](docs/MCP-TROUBLESHOOTING-GUIDE.md) - 解决所有常见问题
 
 ## 📁 项目结构
@@ -58,7 +58,7 @@ rules-2.1-optimized/
 │   ├── docs/                               # 📖 参考文档
 │   │   ├── frontend-guide.md               # 前端开发指南
 │   │   ├── backend-guide.md                # 后端开发指南
-│   │   ├── mcp-setup-guide.md              # MCP工具详细配置
+│   │   ├── MCP-DETAILED-CONFIG-GUIDE.md    # MCP工具详细配置
 │   │   ├── MCP-QUICK-START-GUIDE.md        # MCP快速入门指南
 │   │   └── MCP-TROUBLESHOOTING-GUIDE.md    # MCP故障排除指南
 │   └── USAGE.md                            # 详细使用指南
@@ -112,7 +112,7 @@ rules-2.1-optimized/
 #### 3️⃣ 参考文档（深入学习）
 - **[前端开发指南](docs/frontend-guide.md)** - 前端架构和最佳实践
 - **[后端开发指南](docs/backend-guide.md)** - 后端架构和系统设计
-- **[MCP工具配置指南](docs/mcp-setup-guide.md)** - 详细的MCP工具配置
+- **[MCP详细配置指南](docs/MCP-DETAILED-CONFIG-GUIDE.md)** - 详细的MCP工具配置和多项目管理
 
 #### 4️⃣ 故障排除（遇到问题时）
 - **[MCP故障排除指南](docs/MCP-TROUBLESHOOTING-GUIDE.md)** - 解决所有常见问题
@@ -174,9 +174,9 @@ install-scripts\trae-backend.bat ..\你的项目目录       # Trae AI 后端
 
 ## 📋 版本信息
 
-- **版本**：Rules 2.1 Optimized (Enterprise Edition)
+- **版本**：Rules 2.2.0 Optimized (Enterprise Edition)
 - **基于**：Agent Rules 最佳实践 + Rules 2.1 教程优势
-- **发布日期**：2025年8月1日
+- **发布日期**：2025年1月1日
 - **质量等级**：企业级生产就绪
 - **测试状态**：100%通过率，PERFECT (A++)评级
 

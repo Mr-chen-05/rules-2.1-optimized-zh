@@ -136,8 +136,7 @@ install-scripts\install-all.bat ..\你的项目目录 fullstack
 
 ## 📋 版本信息
 
-**Rules 2.1 Optimized (Enterprise Edition)**
-- 发布日期：2025年8月1日
+**Rules Optimized (Enterprise Edition)**
 - 质量等级：企业级生产就绪
 - 测试状态：PERFECT (A++)评级
 

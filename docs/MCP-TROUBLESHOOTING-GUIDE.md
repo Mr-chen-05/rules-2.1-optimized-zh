@@ -289,7 +289,7 @@ taskkill /PID 1234 /F
 
 ### 自助资源
 - 📚 [MCP快速入门指南](MCP-QUICK-START-GUIDE.md)
-- 🔧 [MCP设置指南](mcp-setup-guide.md)
+- 🔧 [MCP详细配置指南](MCP-DETAILED-CONFIG-GUIDE.md)
 - 📖 [项目README](../README.md)
 
 ### 社区支持
