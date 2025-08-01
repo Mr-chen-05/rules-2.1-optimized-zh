@@ -16,6 +16,12 @@ alwaysApply: false
 - `/test-frontend` - 运行前端测试
 - `/build-frontend` - 构建和优化
 
+### 前端专用配置模式
+- `/设置Vue优先模式` - 优先使用 Vue 3 技术栈
+- `/设置React优先模式` - 优先使用 React 18+ 技术栈
+- `/设置TypeScript严格模式` - 启用最严格的类型检查
+- `/设置性能优化模式` - 自动应用前端性能优化建议
+
 ## 📋 Process - 开发流程
 
 ### 1. 🔍 需求分析 (Requirements Analysis)
@@ -139,3 +145,9 @@ npm run type-check
 - **测试模式** - `/test-frontend`
 - **优化模式** - `/optimize`
 - **部署模式** - `/deploy`
+
+### 前端专用配置模式行为
+- **Vue优先模式** - 激活后优先推荐 Vue 3 + Composition API 技术栈
+- **React优先模式** - 激活后优先推荐 React 18+ + Hooks 技术栈
+- **TypeScript严格模式** - 激活后启用最严格的类型检查和类型安全
+- **性能优化模式** - 激活后自动建议代码分割、懒加载、缓存策略

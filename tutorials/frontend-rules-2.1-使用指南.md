@@ -141,30 +141,42 @@ pip install uv
 ```
 
 ### **3.2 配置文件**
+
+**⚠️ 重要提醒：** 下面的配置文件是**模板**，你必须根据自己的实际情况修改，否则无法正常工作！
+
 创建 `mcp-config.json`：
 ```json
 {
   "mcpServers": {
     "filesystem": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-filesystem", "C:\\your-frontend-projects"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\your-frontend-projects"
+      ],
       "env": {}
     },
     "memory": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-memory"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js"
+      ],
       "env": {}
     },
     "github": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-github"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-github\\dist\\index.js"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
       }
     },
     "everything": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-everything"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-everything\\dist\\index.js"
+      ],
       "env": {}
     },
     "mcp-feedback-enhanced": {
@@ -182,7 +194,55 @@ pip install uv
 }
 ```
 
-**🚨 重要：** 将 `/your/project/path` 替换为你的实际项目路径！
+**🚨 必须修改的内容：**
+1. **MCP工具路径**：将 `C:\\MCP-Tools` 改为你的实际MCP安装路径
+2. **前端项目路径**：将 `C:\\your-frontend-projects` 改为实际路径
+3. **GitHub Token**：将 `your_github_token_here` 改为真实Token
+
+**📂 前端项目路径示例：**
+```json
+// Vue项目
+"D:\\前端\\Vue3项目"
+
+// React项目
+"E:\\React\\我的应用"
+
+// 学习项目
+"C:\\Users\\用户名\\Desktop\\前端学习"
+
+// 工作项目
+"F:\\work\\frontend-projects"
+```
+
+**📝 如何修改配置文件：**
+
+**步骤 1：创建配置文件**
+1. 在你的MCP工具安装目录下创建新文件
+2. 文件名：`mcp-config.json`
+3. 复制上面的模板内容到文件中
+
+**步骤 2：修改MCP工具路径**
+1. 找到所有包含 `C:\\MCP-Tools` 的行
+2. 替换为你的实际MCP工具安装路径
+3. 注意使用双反斜杠格式
+
+**步骤 3：修改前端项目路径**
+1. 找到 `"C:\\your-frontend-projects"` 这一行
+2. 替换为你的实际前端项目路径
+3. 注意使用双反斜杠：`"D:\\前端\\项目"`
+
+**步骤 4：修改 GitHub Token**
+1. 找到 `"your_github_token_here"` 这一行
+2. 替换为你的实际 GitHub Token
+3. 保持双引号格式
+
+**✅ 配置完成检查清单：**
+- [ ] MCP工具路径已改为实际安装路径
+- [ ] 前端项目路径已改为实际项目路径
+- [ ] GitHub Token 已替换为真实 Token
+- [ ] 所有路径使用双反斜杠格式
+- [ ] JSON 格式正确（逗号、括号完整）
+- [ ] 文件已保存为 `mcp-config.json`
 
 ## 🚀 第四步：开始使用
 
@@ -214,7 +274,18 @@ pip install uv
 /优化        # 优化模式
 ```
 
-### **4.3 智能反馈**
+### **4.3 前端专用配置模式**
+```bash
+# 框架优先配置
+/设置Vue优先模式        # 优先使用 Vue 3 技术栈
+/设置React优先模式      # 优先使用 React 18+ 技术栈
+
+# 开发配置
+/设置TypeScript严格模式 # 启用最严格的类型检查
+/设置性能优化模式       # 自动应用前端性能优化建议
+```
+
+### **4.4 智能反馈**
 当遇到以下情况时，AI会自动请求反馈：
 - 🔍 **需求不明确** - 描述模糊时
 - 🎯 **重大决策** - 技术栈选择时

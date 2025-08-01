@@ -164,30 +164,41 @@ uvx mcp-feedback-enhanced@latest version
 
 **📝 完整MCP配置模板：**
 
+**⚠️ 重要提醒：** 下面的配置文件是**模板**，你必须根据自己的实际情况修改，否则无法正常工作！
+
 创建 `mcp-config.json`：
 ```json
 {
   "mcpServers": {
     "filesystem": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-filesystem", "C:\\your-backend-projects"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\your-backend-projects"
+      ],
       "env": {}
     },
     "memory": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-memory"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js"
+      ],
       "env": {}
     },
     "github": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-github"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-github\\dist\\index.js"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
       }
     },
     "everything": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-everything"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-everything\\dist\\index.js"
+      ],
       "env": {}
     },
     "mcp-feedback-enhanced": {
@@ -206,8 +217,21 @@ uvx mcp-feedback-enhanced@latest version
 ```
 
 **🚨 必须修改的内容：**
-1. **后端项目路径**：将 `C:\\your-backend-projects` 改为实际路径
-2. **GitHub Token**：将 `your_github_token_here` 改为真实Token
+1. **MCP工具路径**：将 `C:\\MCP-Tools` 改为你的实际MCP安装路径
+2. **后端项目路径**：将 `C:\\your-backend-projects` 改为实际路径
+3. **GitHub Token**：将 `your_github_token_here` 改为真实Token
+
+**📂 后端项目路径示例：**
+```json
+// Java项目
+"D:\\Java\\SpringBoot项目"
+
+// Python项目
+"E:\\Python\\FastAPI项目"
+
+// Node.js项目
+"C:\\Users\\用户名\\Desktop\\NodeJS"
+```
 
 **💡 配置说明：**
 - **npx命令** - 自动使用最新版本的Node.js MCP工具
@@ -251,7 +275,17 @@ uvx mcp-feedback-enhanced@latest version
 /运维部署    # 运维部署模式
 ```
 
-### **4.3 智能反馈场景**
+### **4.3 专用配置模式**
+```bash
+# 架构策略配置
+/设置微服务模式    # 启用微服务架构优先策略
+/设置单体模式      # 启用单体应用架构策略
+
+# 性能优化配置
+/设置性能优化模式  # 自动应用性能优化建议
+```
+
+### **4.4 智能反馈场景**
 AI会在以下情况主动请求反馈：
 
 #### **架构设计确认：**

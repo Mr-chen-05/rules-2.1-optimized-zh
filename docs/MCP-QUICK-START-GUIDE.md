@@ -39,29 +39,41 @@ pip install uv
 选择适合你的AI工具的配置：
 
 #### 🔥 完整配置（推荐 - 支持所有功能）
+
+**⚠️ 重要提醒：** 下面的配置文件是**模板**，你必须根据自己的实际情况修改，否则无法正常工作！
+
 ```json
 {
   "mcpServers": {
     "filesystem": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-filesystem", "C:\\your-projects"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\your-projects"
+      ],
       "env": {}
     },
     "memory": {
-      "command": "npx", 
-      "args": ["@modelcontextprotocol/server-memory"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js"
+      ],
       "env": {}
     },
     "github": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-github"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-github\\dist\\index.js"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
       }
     },
     "everything": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-everything"],
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-everything\\dist\\index.js"
+      ],
       "env": {}
     },
     "mcp-feedback-enhanced": {
@@ -77,6 +89,104 @@ pip install uv
     }
   }
 }
+```
+
+#### **🚨 配置文件中必须修改的内容：**
+
+**🔧 必须修改的 3 个地方：**
+
+**1. MCP工具安装路径（检查是否正确）**
+```json
+// 如果你的MCP工具不是安装在C:\MCP-Tools，需要修改所有路径：
+"C:\\MCP-Tools\\node_modules\\..."
+
+// 改为你的实际安装路径：
+"D:\\MyMCP\\node_modules\\..."  // 示例：安装在D盘
+```
+
+**2. 项目路径（必改）**
+```json
+// 模板中的默认路径：
+"C:\\your-projects"
+
+// 你需要改为你的实际项目路径：
+"D:\\前端\\Vue项目"           // 示例1：D盘Vue项目
+"C:\\Users\\张三\\Desktop\\前端"  // 示例2：桌面前端项目
+"E:\\workspace\\react-app"    // 示例3：React项目
+```
+
+**3. GitHub Token（必改）**
+```json
+// 模板中的占位符：
+"GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
+
+// 你需要改为你的实际GitHub Token：
+"GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_xxxxxxxxxxxxxxxxxxxx"
+```
+
+#### **📝 如何修改配置文件：**
+
+**步骤 1：创建配置文件**
+1. 在你的MCP工具安装目录下创建新文件（通常是 `C:\MCP-Tools`）
+2. 文件名：`mcp-config.json`
+3. 复制上面的模板内容到文件中
+
+**步骤 2：修改MCP工具路径**
+1. 找到所有包含 `C:\\MCP-Tools` 的行
+2. 替换为你的实际MCP工具安装路径
+3. 注意使用双反斜杠：`"D:\\MyMCP\\node_modules\\..."`
+
+**步骤 3：修改项目路径**
+1. 找到 `"C:\\your-projects"` 这一行
+2. 替换为你的实际项目路径
+3. 注意使用双反斜杠：`"D:\\前端\\项目"`
+
+**步骤 4：修改 GitHub Token**
+1. 找到 `"your_github_token_here"` 这一行
+2. 替换为你的实际 GitHub Token
+3. 保持双引号格式
+
+**步骤 5：保存文件**
+1. 按 `Ctrl + S` 保存
+2. 确认文件名是 `mcp-config.json`
+
+#### **✅ 配置完成检查清单：**
+- [ ] MCP工具路径已改为实际安装路径
+- [ ] 项目路径已改为实际项目路径
+- [ ] GitHub Token 已替换为真实 Token
+- [ ] 所有路径使用双反斜杠格式
+- [ ] JSON 格式正确（逗号、括号完整）
+- [ ] 文件已保存为 `mcp-config.json`
+
+#### **📂 如何找到你的项目路径：**
+
+**方法 1：文件资源管理器**
+1. 打开你的项目文件夹
+2. 点击地址栏（显示路径的地方）
+3. 复制完整路径，如：`D:\前端\TS`
+
+**方法 2：右键菜单**
+1. 在项目文件夹上右键
+2. 选择"属性"
+3. 在"位置"中查看路径
+
+**⚠️ 路径配置注意事项：**
+
+**Windows 路径格式：**
+- ✅ **正确**：`"D:\\前端\\TS"`（双反斜杠）
+- ✅ **正确**：`"D:/前端/TS"`（正斜杠）
+- ❌ **错误**：`"D:\前端\TS"`（单反斜杠会出错）
+
+**路径示例：**
+```json
+// 桌面项目
+"C:\\Users\\你的用户名\\Desktop\\我的项目"
+
+// D盘项目
+"D:\\开发\\前端项目"
+
+// 工作项目
+"E:\\work\\frontend"
 ```
 
 #### 🖥️ 桌面应用配置（推荐桌面用户）
@@ -97,6 +207,80 @@ pip install uv
   }
 }
 ```
+
+#### **📁 多个项目配置（高级）：**
+
+如果你有多个项目在不同文件夹，可以配置多个 filesystem：
+
+```json
+{
+  "mcpServers": {
+    "前端项目": {
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "D:\\前端项目"
+      ],
+      "env": {}
+    },
+    "后端项目": {
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "E:\\后端项目"
+      ],
+      "env": {}
+    },
+    "学习项目": {
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\Users\\用户名\\Desktop\\学习"
+      ],
+      "env": {}
+    },
+    "memory": {
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js"
+      ],
+      "env": {}
+    },
+    "github": {
+      "command": "node",
+      "args": [
+        "C:\\MCP-Tools\\node_modules\\@modelcontextprotocol\\server-github\\dist\\index.js"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
+      }
+    },
+    "mcp-feedback-enhanced": {
+      "command": "uvx",
+      "args": ["mcp-feedback-enhanced@latest"],
+      "timeout": 600,
+      "env": {
+        "MCP_WEB_PORT": "8765",
+        "MCP_DESKTOP_MODE": "false"
+      },
+      "autoApprove": ["interactive_feedback"]
+    }
+  }
+}
+```
+
+#### **🎯 命名规范和技巧：**
+
+**✅ 好的命名：**
+- `前端项目` - 中文描述，一目了然
+- `vue-projects` - 英文描述，简洁明了
+- `work-frontend` - 工作前端项目
+- `study-backend` - 学习后端项目
+
+**❌ 避免的命名：**
+- `filesystem` - 太通用，不知道是什么项目
+- `project1` - 数字命名，容易混淆
+- `aaa` - 无意义命名
 
 #### 🌐 Web界面配置（推荐远程用户）
 ```json

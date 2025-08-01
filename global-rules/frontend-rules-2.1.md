@@ -174,13 +174,57 @@ alwaysApply: true
 - `/测试` - 切换到测试模式
 - `/优化` - 切换到优化模式
 
-### 5.2 智能模式识别
+### 5.2 前端专用配置模式
+- `/设置Vue优先模式` - 优先使用 Vue 3 技术栈，包括 Composition API、Pinia、Vue Router
+- `/设置React优先模式` - 优先使用 React 18+ 技术栈，包括 Hooks、Zustand、React Router
+- `/设置TypeScript严格模式` - 启用最严格的类型检查，强制类型安全
+- `/设置性能优化模式` - 自动应用前端性能优化建议，包括代码分割、懒加载、缓存策略
+
+### 5.3 智能模式识别
 AI会根据用户描述自动判断并切换到合适模式：
 - **UI/样式需求** → UI设计模式
 - **组件实现请求** → 组件开发模式
 - **构建配置问题** → 工程化模式
 - **测试相关** → 测试模式
 - **性能问题** → 优化模式
+
+### 5.4 前端专用配置模式行为定义
+
+#### 🟢 Vue优先模式 (`/设置Vue优先模式`)
+**激活后AI行为变化：**
+- 优先推荐 Vue 3 + Composition API 方案
+- 自动建议 Vite + TypeScript 构建配置
+- 推荐 Pinia 状态管理和 Vue Router 路由
+- 建议 Element Plus 或 Naive UI 组件库
+- 强调 `<script setup>` 语法和响应式API使用
+- 推荐 Vitest 测试框架
+
+#### ⚛️ React优先模式 (`/设置React优先模式`)
+**激活后AI行为变化：**
+- 优先推荐 React 18+ + Hooks 方案
+- 自动建议 Vite 或 Create React App 配置
+- 推荐 Zustand 或 Redux Toolkit 状态管理
+- 建议 Ant Design 或 Material-UI 组件库
+- 强调函数组件和现代 Hooks 使用
+- 推荐 Jest + React Testing Library
+
+#### 🔷 TypeScript严格模式 (`/设置TypeScript严格模式`)
+**激活后AI行为变化：**
+- 启用所有 TypeScript 严格检查选项
+- 强制定义所有类型，禁止使用 any
+- 自动生成详细的接口和类型定义
+- 推荐使用泛型提高代码复用性
+- 强调类型安全的组件 props 定义
+- 建议配置严格的 ESLint TypeScript 规则
+
+#### ⚡ 前端性能优化模式 (`/设置性能优化模式`)
+**激活后AI行为变化：**
+- 自动分析和建议前端性能优化点
+- 优先推荐代码分割和懒加载策略
+- 建议图片优化和 WebP 格式使用
+- 推荐 Service Worker 和缓存策略
+- 强调 Bundle 分析和 Tree Shaking
+- 自动建议 Core Web Vitals 优化方案
 
 ## ✅ 第六章：最佳实践
 
