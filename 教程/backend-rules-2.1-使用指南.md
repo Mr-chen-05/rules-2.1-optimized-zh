@@ -38,7 +38,7 @@
 cd c:\Users\你的用户名\Desktop\rules-2.1-optimized
 
 # 一键安装后端规则到你的项目
-install-scripts\install-all.bat ..\你的项目目录 backend
+安装脚本\install-all.bat ..\你的项目目录 backend
 ```
 
 **🎉 安装完成后：**
@@ -52,22 +52,22 @@ install-scripts\install-all.bat ..\你的项目目录 backend
 
 **Augment 用户：**
 ```cmd
-install-scripts\augment-backend.bat ..\你的项目目录
+安装脚本\augment-backend.bat ..\你的项目目录
 ```
 
 **Cursor 用户：**
 ```cmd
-install-scripts\cursor-backend.bat ..\你的项目目录
+安装脚本\cursor-backend.bat ..\你的项目目录
 ```
 
 **Claude Code 用户：**
 ```cmd
-install-scripts\claude-backend.bat ..\你的项目目录
+安装脚本\claude-backend.bat ..\你的项目目录
 ```
 
 **Trae AI 用户：**
 ```cmd
-install-scripts\trae-backend.bat ..\你的项目目录
+安装脚本\trae-backend.bat ..\你的项目目录
 ```
 
 **💡 为什么推荐一键安装所有工具？**

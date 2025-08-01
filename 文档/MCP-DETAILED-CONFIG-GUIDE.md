@@ -44,6 +44,176 @@ where node
 dir /s /b C:\ | findstr "modelcontextprotocol"
 ```
 
+#### **🚨 找不到MCP工具？完整解决方案**
+
+<details>
+<summary>🔍 <strong>系统性查找MCP工具位置</strong>（点击展开）</summary>
+
+**如果上面的方法都找不到MCP工具，按以下步骤系统性查找：**
+
+**步骤1：全面搜索**
+```powershell
+# 在PowerShell中执行以下命令
+Write-Host "正在搜索MCP工具..." -ForegroundColor Yellow
+
+# 搜索MCP相关文件夹
+Write-Host "搜索MCP文件夹..." -ForegroundColor Green
+Get-ChildItem -Path C:\ -Recurse -Directory -Name "*modelcontextprotocol*" -ErrorAction SilentlyContinue
+
+# 搜索MCP服务器文件
+Write-Host "搜索MCP服务器文件..." -ForegroundColor Green
+Get-ChildItem -Path C:\ -Recurse -Name "*server-filesystem*" -ErrorAction SilentlyContinue
+
+# 搜索包含MCP的所有文件夹
+Write-Host "搜索包含MCP的文件夹..." -ForegroundColor Green
+Get-ChildItem -Path C:\ -Recurse -Directory -Name "*mcp*" -ErrorAction SilentlyContinue
+```
+
+**步骤2：检查npm全局包**
+```bash
+# 查看所有全局安装的包
+npm list -g --depth=0
+
+# 查看npm全局安装路径
+npm root -g
+
+# 如果看到@modelcontextprotocol相关包，记下路径！
+```
+
+**步骤3：检查常见安装位置**
+```bash
+# 检查用户目录下的npm包
+dir "%APPDATA%\npm\node_modules" | findstr "modelcontextprotocol"
+
+# 检查Program Files下的Node.js
+dir "C:\Program Files\nodejs\node_modules" | findstr "modelcontextprotocol"
+
+# 检查可能的自定义安装路径
+dir "C:\MCP-Tools" 2>nul
+dir "C:\tools" | findstr "mcp" 2>nul
+```
+
+**步骤4：通过Node.js路径推断**
+```bash
+# 查看Node.js安装位置
+where node
+# 输出示例：C:\Program Files\nodejs\node.exe
+
+# 基于Node.js位置查找MCP工具
+# 通常在：C:\Program Files\nodejs\node_modules\@modelcontextprotocol\
+```
+
+**步骤5：检查其他包管理器**
+```bash
+# 检查yarn全局包
+yarn global list
+
+# 检查pnpm全局包
+pnpm list -g
+
+# 检查Python包（某些MCP工具是Python包）
+pip list | findstr mcp
+```
+
+</details>
+
+<details>
+<summary>🔧 <strong>如果完全找不到，重新安装MCP工具</strong>（点击展开）</summary>
+
+**可能的情况：MCP工具没有正确安装**
+
+**重新安装所有MCP工具：**
+```bash
+# 安装核心MCP服务器
+npm install -g @modelcontextprotocol/server-filesystem
+npm install -g @modelcontextprotocol/server-memory
+npm install -g @modelcontextprotocol/server-github
+npm install -g @modelcontextprotocol/server-everything
+
+# 安装Python MCP工具
+pip install uv
+# 或者
+uvx mcp-feedback-enhanced@latest
+```
+
+**验证安装：**
+```bash
+# 检查安装是否成功
+npm list -g --depth=0 | findstr "modelcontextprotocol"
+
+# 查看安装路径
+npm root -g
+```
+
+**安装到指定目录（推荐）：**
+```bash
+# 创建专门的MCP工具目录
+mkdir C:\MCP-Tools
+cd C:\MCP-Tools
+
+# 初始化npm项目
+npm init -y
+
+# 安装MCP工具到当前目录
+npm install @modelcontextprotocol/server-filesystem
+npm install @modelcontextprotocol/server-memory
+npm install @modelcontextprotocol/server-github
+npm install @modelcontextprotocol/server-everything
+
+# 这样MCP工具就安装在：C:\MCP-Tools\node_modules\@modelcontextprotocol\
+```
+
+</details>
+
+<details>
+<summary>🎯 <strong>一键查找脚本</strong>（点击展开）</summary>
+
+**创建自动查找脚本：**
+
+1. **创建文件** `find-mcp.bat`：
+```batch
+@echo off
+chcp 65001 >nul
+echo 🔍 正在查找MCP工具安装位置...
+echo.
+
+echo [1/5] 检查npm全局包...
+npm list -g --depth=0 | findstr "modelcontextprotocol"
+echo.
+
+echo [2/5] 查看npm全局路径...
+npm root -g
+echo.
+
+echo [3/5] 搜索MCP文件夹...
+dir /s /b C:\ | findstr "modelcontextprotocol" 2>nul
+echo.
+
+echo [4/5] 检查常见位置...
+if exist "%APPDATA%\npm\node_modules\@modelcontextprotocol" (
+    echo ✅ 找到：%APPDATA%\npm\node_modules\@modelcontextprotocol
+)
+if exist "C:\Program Files\nodejs\node_modules\@modelcontextprotocol" (
+    echo ✅ 找到：C:\Program Files\nodejs\node_modules\@modelcontextprotocol
+)
+if exist "C:\MCP-Tools\node_modules\@modelcontextprotocol" (
+    echo ✅ 找到：C:\MCP-Tools\node_modules\@modelcontextprotocol
+)
+
+echo [5/5] 检查Node.js位置...
+where node
+
+echo.
+echo 🎉 查找完成！请查看上面的输出结果。
+pause
+```
+
+2. **运行脚本**：
+   - 双击 `find-mcp.bat` 文件
+   - 脚本会自动搜索所有可能的MCP工具位置
+
+</details>
+
 ### **1.2 找到你的项目路径**
 
 **🎯 为什么需要项目路径？**
